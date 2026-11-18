@@ -1,0 +1,20 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import '../client/src/tailwind-theme.css';
+@import '../client/src/typography.css';
+@source '../client/src';
+@theme inline {
+ --color-background:var(--background); --color-foreground:var(--foreground); --color-card:var(--card); --color-card-foreground:var(--card-foreground); --color-popover:var(--popover); --color-popover-foreground:var(--popover-foreground); --color-primary:var(--primary); --color-primary-foreground:var(--primary-foreground); --color-secondary:var(--secondary); --color-secondary-foreground:var(--secondary-foreground); --color-muted:var(--muted); --color-muted-foreground:var(--muted-foreground); --color-accent:var(--accent); --color-accent-foreground:var(--accent-foreground); --color-border:var(--border); --color-input:var(--input); --color-ring:var(--ring); --color-destructive:var(--destructive); --radius-lg:1rem;
+}
+body{-webkit-font-smoothing:antialiased;margin:0}.lucide{stroke-width:1.75}
+.preview-nav{position:fixed;left:20px;top:20px;width:235px;padding:20px;border:1px solid var(--border);border-radius:20px;background:white;z-index:90;color:var(--foreground);font:14px system-ui;max-height:94vh;overflow:auto}.preview-nav p{font-size:12px;color:var(--muted-foreground);margin:8px 0 16px}.preview-nav a{display:block;padding:8px 10px;border-radius:8px;text-decoration:none;color:inherit}.preview-nav a:hover{background:var(--muted)}.preview-nav small{display:block;color:var(--muted-foreground);font-size:10px;margin-top:2px}@media(max-width:1050px){.preview-nav{position:relative;left:auto;top:auto;width:auto;margin:12px;max-height:145px}.preview-nav a{display:inline-block}.preview-nav small{display:none}}
+
+/* Match Miaoda's 390 x 844 mobile CSS viewport on desktop. */
+.device-preview{min-height:100dvh;background:var(--muted);display:flex;justify-content:center;align-items:flex-start;padding:36px 20px 36px 280px;box-sizing:border-box}
+.device-frame{display:block;width:390px;height:844px;flex-shrink:0;border:1px solid var(--border);border-radius:24px;background:var(--background);box-shadow:0 0 0 4px white;box-sizing:content-box}
+.device-preview .preview-nav{position:fixed;left:20px;top:20px;width:235px;max-height:94vh;margin:0}
+.device-preview .preview-nav a{display:block}
+.device-preview .preview-nav small{display:block}
+.inside-device-preview .mobile-preview-nav{display:none}
+.inside-device-preview body{background:var(--background)}
+@media(max-width:767px){.mobile-preview-nav{display:none}}

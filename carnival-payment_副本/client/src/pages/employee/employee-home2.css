@@ -1,0 +1,136 @@
+/* Alternative apple-green employee home. All rules scoped to this route. */
+.jnh-page[data-page="/employee2"] {
+  --jnh-canvas: #ffffff;
+  --jnh-surface: #ffffff;
+  --jnh-surface-1: #e7efdf;
+  --jnh-hairline: #dce6d6;
+  --jnh-ink: #223020;
+  --jnh-ink-muted: #65715e;
+  --jnh-ink-subtle: #65715e;
+  --jnh-primary: #263b22;
+  --jnh-primary-top: #344b2d;
+  --jnh-brand-soft: #e4efd9;
+  --jnh-strong: #375b25;
+  --apple-green: #a9d76e;
+  --apple-card-start: #79ae68;
+  --apple-card-end: #c1e887;
+  --apple-card-sheen: #d6efb5;
+  --jnh-radius: 26px;
+  --jnh-radius-lg: 30px;
+  --jnh-radius-btn: 999px;
+  background: var(--jnh-canvas);
+}
+[data-page="/employee2"] .aurora-header { padding-top: 24px; padding-bottom: 24px; }
+[data-page="/employee2"] .aurora-header .t-title { font-size: 18px; line-height: 26px; }
+[data-page="/employee2"] .aurora-header .t-caption { margin-top: 4px; }
+[data-page="/employee2"] .shell-content { padding-top: 0; }
+[data-page="/employee2"] .apple-balance-card {
+  padding: 20px; border: none; border-radius: 28px; color: var(--jnh-ink);
+  background: radial-gradient(ellipse at 100% 110%, var(--apple-card-sheen), transparent 60%), linear-gradient(120deg,var(--apple-card-start),var(--apple-green) 68%,var(--apple-card-end));
+  box-shadow: none;
+}
+[data-page="/employee2"] .apple-balance-card::before,
+[data-page="/employee2"] .apple-balance-card::after { display: none; }
+[data-page="/employee2"] .apple-card-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; gap: 8px; }
+[data-page="/employee2"] .apple-card-top > span:first-child { display: inline-flex; align-items: center; gap: 6px; background: var(--jnh-ink); color: var(--jnh-surface); border-radius: 999px; padding: 7px 12px; font-size: 11px; }
+[data-page="/employee2"] .apple-card-edition { font-size: 11px; font-weight: 500; }
+[data-page="/employee2"] .apple-balance-card .hero-label { color: var(--jnh-ink); font-size: 12px; opacity: .8; }
+[data-page="/employee2"] .apple-balance-card .hero-amount { color: var(--jnh-surface); font-size: 40px; line-height: 48px; font-weight: 600; margin-top: 4px; }
+[data-page="/employee2"] .apple-balance-card .balance-details { margin-top: 24px; gap: 12px; }
+[data-page="/employee2"] .apple-balance-card .kv-label { color: var(--jnh-ink); opacity: .7; }
+[data-page="/employee2"] .apple-balance-card .kv-value { color: var(--jnh-ink); font-weight: 600; }
+[data-page="/employee2"] .apple-shortcuts { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 12px; padding-top: 24px; padding-bottom: 4px; }
+[data-page="/employee2"] .apple-shortcuts button { display: flex; flex-direction: column; align-items: center; gap: 10px; min-width: 0; font-size: 12px; color: var(--jnh-ink); }
+[data-page="/employee2"] .apple-shortcuts button > span { display: flex; width: 60px; height: 60px; align-items: center; justify-content: center; border-radius: 50%; background: var(--jnh-surface); color: var(--jnh-strong); transition: background-color 120ms; }
+[data-page="/employee2"] .apple-shortcuts button:first-child > span { background: var(--apple-green); color: var(--jnh-ink); }
+[data-page="/employee2"] .apple-shortcuts button:active > span { background: var(--jnh-brand-soft); }
+[data-page="/employee2"] .group-head { min-height: 36px; }
+[data-page="/employee2"] .group-title { font-size: 17px; line-height: 25px; }
+[data-page="/employee2"] .card { border: none; box-shadow: none; }
+[data-page="/employee2"] .row { padding: 16px; min-height: 76px; }
+[data-page="/employee2"] .row-icon { border-radius: 50%; border: 1px solid var(--jnh-hairline); background: transparent; }
+[data-page="/employee2"] .group-action { padding: 8px 12px; min-height: 36px; border-radius: 999px; background: var(--apple-green); color: var(--jnh-ink); font-size: 12px; }
+[data-page="/employee2"] .group .jnh-btn-outline { border-radius: 999px; background: var(--apple-green); color: var(--jnh-ink); border-color: transparent; box-shadow: none; }
+[data-page="/employee2"] .shell-bottom .jnh-btn-primary { background: var(--apple-green); color: var(--jnh-ink); border-color: transparent; box-shadow: none; }
+[data-page="/employee2"] .note { font-size: 12px; }
+#apple-password-section { scroll-margin-top: 100px; }
+@media(max-width:360px) {
+  [data-page="/employee2"] .apple-shortcuts { gap: 8px; }
+  [data-page="/employee2"] .apple-shortcuts button > span { width: 54px; height: 54px; }
+  [data-page="/employee2"] .apple-card-edition { font-size: 10px; }
+}
+
+/* Anniversary ticket palette and flowing ribbon background. */
+[data-page="/employee2"] .apple-balance-card {
+  --ticket-peach: #ffb892;
+  --ticket-cream: #fbe7b4;
+  --ticket-green: #d9f5c7;
+  --ticket-ink: #4e412f;
+  --ticket-ribbon: rgba(255,255,241,.48);
+  background: radial-gradient(ellipse at 0% 0%, rgba(255,242,226,.78), transparent 52%), linear-gradient(108deg,var(--ticket-peach) 4%,var(--ticket-cream) 58%,var(--ticket-green) 100%);
+  color: var(--ticket-ink);
+  isolation: isolate;
+}
+[data-page="/employee2"] .apple-balance-card::before {
+  display: block; content: ''; position: absolute; inset: auto; left: -12%; bottom: -68px;
+  width: 130%; height: 100px; border-radius: 50%;
+  background: var(--ticket-ribbon); transform: rotate(-10deg); animation: none; mix-blend-mode: normal; opacity: 1; z-index: 0;
+}
+[data-page="/employee2"] .apple-balance-card::after {
+  display: block; content: ''; position: absolute; inset: auto; right: -28%; top: -60%;
+  width: 130%; height: 155%; border-radius: 50%;
+  background: transparent; border: 22px solid var(--ticket-ribbon);
+  transform: rotate(-18deg); filter: blur(4px); opacity: .6; z-index: 0;
+}
+[data-page="/employee2"] .apple-balance-card .hero-label,
+[data-page="/employee2"] .apple-balance-card .hero-amount,
+[data-page="/employee2"] .apple-balance-card .kv-label,
+[data-page="/employee2"] .apple-balance-card .kv-value { color: var(--ticket-ink); }
+
+[data-page="/employee2"] .apple-balance-card .hero-quick-item {
+  --ticket-action-bg: rgba(48,50,47,.88);
+  background: var(--ticket-action-bg);
+  color: var(--jnh-on-primary);
+  border: none;
+  box-shadow: none;
+}
+[data-page="/employee2"] .apple-balance-card .hero-quick-item:hover { background: var(--jnh-ink); }
+[data-page="/employee2"] .apple-balance-card .hero-quick-item:active { background: var(--jnh-primary); }
+[data-page="/employee2"] .apple-balance-card .hero-quick-item svg { color: var(--jnh-action-apple); }
+
+/* Warm translucent actions blend with the ticket card palette. */
+[data-page="/employee2"] .apple-balance-card .hero-quick-item {
+  --ticket-action-soft: rgba(255,253,242,.56);
+  --ticket-action-hover: rgba(255,253,242,.72);
+  --ticket-action-active: rgba(255,253,242,.42);
+  background: var(--ticket-action-soft);
+  color: var(--ticket-ink);
+  border: none;
+  box-shadow: none;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+[data-page="/employee2"] .apple-balance-card .hero-quick-item:hover { background: var(--ticket-action-hover); }
+[data-page="/employee2"] .apple-balance-card .hero-quick-item:active { background: var(--ticket-action-active); }
+[data-page="/employee2"] .apple-balance-card .hero-quick-item svg { color: var(--ticket-ink); }
+
+/* Match home 1 typography and spacing; keep the ticket palette. */
+[data-page="/employee2"] .apple-balance-card { padding: 20px; }
+[data-page="/employee2"] .apple-balance-card .hero-amount {
+  font-size: 34px;
+  line-height: 42px;
+  font-weight: 500;
+  letter-spacing: -.04em;
+  margin-top: 4px;
+}
+[data-page="/employee2"] .apple-balance-card .balance-details { margin-top: 16px; gap: 12px; }
+[data-page="/employee2"] .apple-balance-card .kv-label { font-size: 11px; line-height: 16px; }
+[data-page="/employee2"] .apple-balance-card .kv-value { font-size: 13px; line-height: 20px; font-weight: 500; margin-top: 4px; }
+[data-page="/employee2"] .apple-balance-card .hero-quick { margin-top: 16px; gap: 12px; }
+[data-page="/employee2"] .apple-balance-card .hero-quick-item { height: 44px; min-height: 44px; }
+
+/* Both appearances share layout; only color/material tokens differ. */
+[data-page="/employee2"] .group-title { font-size: 15px; line-height: 21px; }
+[data-page="/employee2"] .group-head { min-height: 32px; }
+[data-page="/employee2"] .row { padding: 14px 16px; min-height: 72px; }
+[data-page="/employee2"] .apple-balance-card .hero-label { letter-spacing: .025em; }

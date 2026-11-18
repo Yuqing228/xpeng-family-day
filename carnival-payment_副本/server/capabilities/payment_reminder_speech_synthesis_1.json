@@ -1,0 +1,22 @@
+{
+  "id": "payment_reminder_speech_synthesis_1",
+  "pluginKey": "@official-plugins/ai-speech-synthesis",
+  "pluginVersion": "1.0.13",
+  "name": "到账提醒开启确认语音合成",
+  "description": "将固定中文文案「到账提醒已开启」合成为清晰自然的女声语音，作为摊主端到账提醒开关开启的确认音，适配手机外放播报场景。",
+  "icon": "",
+  "paramsSchema": {
+    "properties": {},
+    "required": [],
+    "type": "object"
+  },
+  "formValue": {
+    "text": "到账提醒已开启",
+    "voiceType": "zh_female_qingxinnvsheng_mars_bigtts",
+    "speedRatio": "0.8",
+    "volumeRatio": "1.0"
+  },
+  "createdAt": 1793591227726,
+  "updatedAt": 1793591227726,
+  "createdBy": 7022864343473651716
+}

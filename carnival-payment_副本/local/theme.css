@@ -1,0 +1,152 @@
+.preview-nav-heading { display:flex; align-items:center; justify-content:space-between; gap:4px; }
+.preview-nav-heading strong { font-size:13px; }
+.preview-theme-toggle { display:flex; align-items:center; justify-content:center; width:32px; height:32px; flex-shrink:0; border-radius:50%; border:1px solid var(--border); background:var(--background); color:var(--foreground); cursor:pointer; }
+.preview-theme-toggle:hover { background:var(--muted); }
+.preview-theme-toggle:focus-visible { outline:2px solid var(--ring); outline-offset:3px; }
+html[data-preview-theme="dark"] {
+ --background:#171d19; --foreground:#e5ebe5; --card:#222a24; --card-foreground:#e5ebe5;
+ --popover:#222a24; --popover-foreground:#e5ebe5; --muted:#202820; --muted-foreground:#a8b5a8;
+ --border:#3a463c; --input:#566657; --ring:#b8d88b;
+ --primary:#b8d88b; --primary-foreground:#1d2c1e; --secondary:#303d32; --secondary-foreground:#e5ebe5;
+ --accent:#303d32; --accent-foreground:#cee2bc;
+}
+html[data-preview-theme="dark"] body { background:var(--background); color:var(--foreground); }
+html[data-preview-theme="dark"] .preview-nav { background:var(--card); }
+html[data-preview-theme="dark"] .device-frame { box-shadow:0 0 0 4px var(--card); }
+html[data-preview-theme="dark"] .jnh-page,
+html[data-preview-theme="dark"] .jnh-page[data-page] {
+ --jnh-canvas:#171d19; --jnh-surface:#222a24; --jnh-surface-1:#2a352c; --jnh-surface-2:#354338;
+ --jnh-ink:#e5ebe5; --jnh-ink-muted:#a8b5a8; --jnh-ink-subtle:#a8b5a8; --jnh-hairline:#3a463c;
+ --jnh-brand-soft:#303f2b; --jnh-primary-soft:#29382d; --jnh-strong:#c0dca2;
+ --jnh-primary:#34513f; --jnh-primary-top:#42664e;
+ --jnh-kv-bg:#29332b; --jnh-unified-header-bg:#202722;
+ --jnh-bind-paper:#171d19;
+ background-color:var(--jnh-canvas); background-image:none;
+}
+html[data-preview-theme="dark"] .jnh-page:has(> header.aurora-header) > header.aurora-header { background:#202722; }
+html[data-preview-theme="dark"] .shell-bottom { background:var(--jnh-canvas); }
+html[data-preview-theme="dark"] .jnh-page:has(.bind-intro) { background-image:linear-gradient(180deg,rgba(15,25,19,.83),rgba(15,25,19,.60)),url('../client/src/assets/xpeng-headquarters.jpg'); background-size:cover; background-position:center bottom; }
+html[data-preview-theme="dark"] .jnh-page .shared-avatar { background:#2c3b2c; color:#c0dca2; }
+html[data-preview-theme="dark"] .jnh-page .shared-avatar svg { color:#c0dca2; }
+html[data-preview-theme="dark"] .jnh-page .anniversary-logo-crop { mix-blend-mode:normal; }
+html[data-preview-theme="dark"] .jnh-page .anniversary-logo-crop img { filter:invert(1); mix-blend-mode:screen; }
+/* Preserve the light ticket card's original palette and readable dark labels. */
+html[data-preview-theme="dark"] [data-page="/employee2"] .apple-balance-card { --ticket-ink:#4e412f; }
+html[data-preview-theme="dark"] [data-page="/employee2"] .group-action,
+html[data-preview-theme="dark"] [data-page="/employee2"] .group .jnh-btn-outline { color:#223020; }
+
+/* Keep the desktop preview canvas white in both appearances. */
+.device-preview,
+html[data-preview-theme="dark"] .device-preview { background: #ffffff; }
+
+/* Dark palette: neutral charcoal surfaces and lime icon accents. */
+html[data-preview-theme="dark"] {
+ --background:#191a1d; --foreground:#f0f1ed; --card:#292a2e; --card-foreground:#f0f1ed;
+ --popover:#292a2e; --popover-foreground:#f0f1ed;
+ --muted:#232428; --muted-foreground:#a7a9a5; --border:#414348; --input:#54565b;
+ --primary:#c5ed77; --primary-foreground:#22251b; --ring:#c5ed77;
+ --secondary:#34363a; --secondary-foreground:#f0f1ed; --accent:#343b2d; --accent-foreground:#d5f39c;
+}
+html[data-preview-theme="dark"] .jnh-page,
+html[data-preview-theme="dark"] .jnh-page[data-page] {
+ --jnh-canvas:#191a1d; --jnh-surface:#292a2e; --jnh-surface-1:#303135; --jnh-surface-2:#3b3d42;
+ --jnh-ink:#f0f1ed; --jnh-ink-muted:#a7a9a5; --jnh-ink-subtle:#a7a9a5; --jnh-hairline:#414348;
+ --jnh-brand:#c5ed77; --jnh-brand-soft:#343b2d; --jnh-primary-soft:#32382b; --jnh-strong:#c5ed77;
+ --jnh-primary:#bce85f; --jnh-primary-top:#d0f298; --jnh-primary-hover:#cbed83; --jnh-primary-active:#a9d54e;
+ --jnh-on-primary:#22251b; --jnh-primary-border:#bce85f;
+ --jnh-kv-bg:#303135; --jnh-unified-header-bg:#232428;
+ --jnh-success:#c5ed77;
+}
+html[data-preview-theme="dark"] .jnh-page:has(> header.aurora-header) > header.aurora-header { background:#232428; }
+html[data-preview-theme="dark"] .jnh-page .shared-avatar { background:#2d2f32; color:#c5ed77; }
+html[data-preview-theme="dark"] .jnh-page .shared-avatar svg,
+html[data-preview-theme="dark"] .jnh-page .row-icon svg,
+html[data-preview-theme="dark"] .jnh-page .note > svg { color:#c5ed77; stroke:currentColor; }
+html[data-preview-theme="dark"] .jnh-page .row-icon { background:#303234; }
+html[data-preview-theme="dark"] .jnh-page .chip-ok { background:#343b2d; color:#c5ed77; }
+html[data-preview-theme="dark"] .jnh-page .jnh-btn-primary { color:#22251b; }
+html[data-preview-theme="dark"] .jnh-page .jnh-btn-outline { background:#303135; color:#f0f1ed; border-color:#54565b; }
+html[data-preview-theme="dark"] [data-page="/employee"] .employee-balance-card {
+ --jnh-card-forest:#242629; --jnh-card-green:rgba(148,190,74,.28);
+ --jnh-card-orange:rgba(214,151,82,.18); --jnh-card-top-sheen:rgba(255,255,255,.12);
+ --jnh-action-apple:#c5ed77;
+}
+html[data-preview-theme="dark"] .employee-balance-card .hero-quick-item { background:rgba(255,255,255,.08); color:#f0f1ed; }
+html[data-preview-theme="dark"] .employee-balance-card .hero-quick-item svg { color:#c5ed77; }
+
+/* Dark home card: green light at the upper left, orange diffusion at the side. */
+html[data-preview-theme="dark"] [data-page="/employee"] .employee-balance-card {
+  --jnh-card-diffuse-base:#222426;
+  --jnh-card-diffuse-green:rgba(21,192,120,.74);
+  --jnh-card-diffuse-lime:rgba(183,221,110,.48);
+  --jnh-card-diffuse-orange:rgba(236,137,76,.52);
+  background:
+    radial-gradient(ellipse 76% 105% at -12% -18%,var(--jnh-card-diffuse-green),transparent 76%),
+    radial-gradient(ellipse 34% 64% at -12% 34%,var(--jnh-card-diffuse-lime),transparent 82%),
+    radial-gradient(ellipse 44% 65% at -17% 69%,var(--jnh-card-diffuse-orange),transparent 80%),
+    var(--jnh-card-diffuse-base);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.14),var(--jnh-shadow-sm);
+}
+
+/* Tint the dark-mode brush logo to the shared lime accent. */
+html[data-preview-theme="dark"] .jnh-page .anniversary-logo-crop img {
+  filter: invert(86%) sepia(40%) saturate(535%) hue-rotate(35deg) brightness(102%) contrast(88%);
+  mix-blend-mode: screen;
+}
+html[data-preview-theme="dark"] .jnh-page .anniversary-logo-transparent { background:#c5ed77; mix-blend-mode:normal; }
+
+html[data-preview-theme="dark"] .jnh-page .bind-card {
+  background: rgba(115,120,119,.27);
+  border-color: rgba(255,255,255,.22);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.20), 0 12px 32px rgba(0,0,0,.12);
+}
+html[data-preview-theme="dark"] .jnh-page .bind-card .field-input {
+  background: rgba(20,24,24,.26);
+  border-color: rgba(255,255,255,.40);
+}
+html[data-preview-theme="dark"] .jnh-page .bind-card .jnh-btn-primary:disabled {
+  color: var(--jnh-ink-muted);
+  background: rgba(255,255,255,.09);
+  border-color: rgba(255,255,255,.12);
+  box-shadow: none;
+}
+
+html[data-preview-theme="dark"] .jnh-page:has(.bind-intro) {
+  background-image: linear-gradient(rgba(0,0,0,.20),rgba(0,0,0,.20)),url('../client/src/assets/xpeng-campus-portrait.png');
+  background-size:cover;
+  background-position:center bottom;
+}
+html[data-preview-theme="dark"] .jnh-page:has(.bind-intro) .shell-content {
+  --jnh-ink:#263c31;
+  --jnh-ink-muted:#52665a;
+  --jnh-ink-subtle:#52665a;
+  --jnh-canvas:rgba(255,255,255,.25);
+}
+html[data-preview-theme="dark"] .jnh-page .bind-card {
+  background:rgba(255,255,255,.36);
+  border-color:rgba(255,255,255,.62);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.5),0 12px 32px rgba(33,58,42,.08);
+}
+html[data-preview-theme="dark"] .jnh-page .bind-card .field-input {
+  background:rgba(255,255,255,.26);
+  border-color:rgba(70,94,79,.3);
+}
+html[data-preview-theme="dark"] .jnh-page .bind-card .jnh-btn-primary:disabled {
+  background:rgba(56,79,64,.10);
+  border-color:rgba(56,79,64,.12);
+}
+html[data-preview-theme="dark"] .jnh-page:has(.bind-intro) .note > svg { color:#466f42; }
+
+html[data-preview-theme="dark"] [data-page="/employee"] .employee-balance-card {
+  border-color: transparent;
+  background-clip: padding-box;
+  box-shadow: var(--jnh-shadow-sm);
+}
+
+html[data-preview-theme="dark"] .jnh-page[data-page]:has(.bill-ticket),
+html[data-preview-theme="dark"] .jnh-page[data-page]:has(.merchant-bind-card) {
+  background: linear-gradient(180deg, #34432B 0%, #252C23 35%, #191A1D 78%);
+}
+html[data-preview-theme="dark"] .jnh-page[data-page] .bill-ticket {
+  background: #292A2E;
+}

@@ -1,0 +1,48 @@
+{
+  "id": "siqing_carnival_payment_welcome_message_1",
+  "pluginKey": "@official-plugins/send-feishu-message",
+  "pluginVersion": "1.0.33",
+  "name": "司庆家年华支付系统登录欢迎消息",
+  "description": "员工首次扫码登录司庆家年华支付系统成功后，向员工本人发送欢迎引导消息，包含员工端入口指引。",
+  "icon": "",
+  "paramsSchema": {
+    "type": "object",
+    "properties": {
+      "employeeUrl": {
+        "type": "string",
+        "description": "员工端页面深链 URL，服务端拼接后传入"
+      },
+      "receiverIds": {
+        "type": "array",
+        "description": "收件人用户 ID 列表，运行时传入单个员工",
+        "items": {
+          "type": "string",
+          "description": "用户 ID"
+        }
+      }
+    },
+    "required": [
+      "receiverIds",
+      "employeeUrl"
+    ]
+  },
+  "formValue": {
+    "title": {
+      "title": "司庆家年华支付",
+      "titleColor": "wathet"
+    },
+    "content": "您已成功登录司庆家年华支付系统。\n\n在员工端，您可以为家属配置专属付款身份（家人扫码即可消费），还可以查看支付账单与工卡余额。\n\n点击下方按钮进入员工端。",
+    "receiverUserList": "{{input.receiverIds}}",
+    "receiverGroupList": [],
+    "sender": "bot",
+    "buttons": [
+      {
+        "text": "进入员工端",
+        "url": "{{input.employeeUrl}}"
+      }
+    ]
+  },
+  "createdAt": 1793954038904,
+  "updatedAt": 1793954038904,
+  "createdBy": 7022864343473651716
+}

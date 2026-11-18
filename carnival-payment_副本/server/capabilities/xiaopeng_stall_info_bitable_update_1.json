@@ -1,0 +1,60 @@
+{
+  "id": "xiaopeng_stall_info_bitable_update_1",
+  "pluginKey": "@official-plugins/feishu-bitable",
+  "pluginVersion": "1.0.27",
+  "name": "小鹏摊主信息多维表更新",
+  "description": "小鹏家年华-基础数据的「小鹏摊主信息」表批量更新实例，用于服务端自动化任务按 record_id 批量更新摊主口令与摊主收款码字段，只做 update 不做新增/删除。",
+  "icon": "",
+  "paramsSchema": {},
+  "formValue": {
+    "appToken": "BFRIbAu3vaNwt5sJhjTciJ9On0e",
+    "tableID": "tblY40NrzP7jmo6K",
+    "fields": [
+      {
+        "id": "fldBaseRecordID",
+        "name": "Base 表记录 ID",
+        "type": 1,
+        "bizType": "Text",
+        "readable": true,
+        "writeable": true
+      },
+      {
+        "id": "fldStallName",
+        "name": "摊主名称",
+        "type": 1,
+        "bizType": "Text",
+        "readable": true,
+        "writeable": true
+      },
+      {
+        "name": "摊主编码",
+        "type": 1,
+        "bizType": "Text",
+        "readable": true,
+        "writeable": true,
+        "id": "fldStallCode"
+      },
+      {
+        "id": "fldStallPassword",
+        "name": "摊主口令",
+        "type": 1,
+        "bizType": "Text",
+        "readable": true,
+        "writeable": true
+      },
+      {
+        "writeable": true,
+        "id": "fldPaymentQRCode",
+        "name": "摊主收款码",
+        "type": 17,
+        "bizType": "Attachment",
+        "readable": true
+      }
+    ],
+    "owner": "",
+    "tips": "使用 batchUpdateRecords 动作，按 record_id 批量更新「摊主口令」(Text) 与「摊主收款码」(Attachment，传入文件URL数组) 字段。仅用于更新操作，不做新增和删除。"
+  },
+  "createdAt": 1793930364938,
+  "updatedAt": 1793930364938,
+  "createdBy": 7022864343473651716
+}
